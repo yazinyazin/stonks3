@@ -1,0 +1,12 @@
+services:
+  stonksdb_test:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=myuser'
+    volumes:
+      - '/home/yazix/Desktop/stonksdb_test=/var/lib/mysql'
+    ports:
+      - '3306'
